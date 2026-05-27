@@ -16,6 +16,7 @@ export const org = {
 
 export const nav = [
   { label: "How It Works", href: "/#how-it-works" },
+  { label: "Watch", href: "/#watch" },
   { label: "The Plan", href: "/#the-plan" },
   { label: "News", href: "/#news" },
   { label: "About", href: "/#about" },
@@ -74,6 +75,14 @@ export const howItWorks = {
         "Recipients receive immediate shelter — and with it, the dignity, stability, and hope to take the next step forward.",
     },
   ],
+};
+
+export const video = {
+  title: "See the idea in action",
+  subtitle:
+    "Our founder Claudio Bono on how unused hotel rooms and travel rewards can close the shelter gap.",
+  youtubeId: "Lj-e-Hb2NsQ",
+  caption: "Can Empty Hotel Rooms Fill California's Shelter Gap? — California Insider Opinion",
 };
 
 export const plan = {
