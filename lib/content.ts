@@ -125,6 +125,7 @@ export const news = {
   articles: [
     {
       outlet: "State of the Union News",
+      logo: "/images/news/state-of-union.png",
       headline:
         "Proposal to Address California's Homelessness Crisis Introduced by GiveaRoof.org Founder Claudio Bono",
       date: "August 26, 2025",
@@ -132,6 +133,7 @@ export const news = {
     },
     {
       outlet: "Associated Press",
+      logo: "/images/news/associated-press.jpg",
       headline:
         "A Voice for Change: Cupertino Activist Sends Urgent Homelessness Plan to White House",
       date: "August 7, 2025",
@@ -139,6 +141,7 @@ export const news = {
     },
     {
       outlet: "California News Observer",
+      logo: "/images/news/california-news-observer.png",
       headline:
         "A Voice for Change: Cupertino Activist Sends Urgent Homelessness Plan to White House",
       date: "August 7, 2025",
@@ -153,11 +156,20 @@ export const news = {
     },
     {
       outlet: "KRON 4",
+      logo: "/images/news/kron4.jpg",
       headline: "Claudio Bono Introduces New Initiative for the Homeless Crisis",
       date: "April 30, 2024",
       url: "https://www.kron4.com/business/press-releases/ein-presswire/707829683/claudio-bono-introduces-new-initiative-for-the-homeless-crisis/",
     },
   ],
+};
+
+export const podcast = {
+  title: "Listen to the conversation",
+  subtitle:
+    "Founder Claudio Bono on the idea behind Give A Roof and the plan to end homelessness.",
+  episodeId: "66119915",
+  url: "https://www.spreaker.com/episode/claudio-bono-founder-givearoof-org--66119915",
 };
 
 export const about = {

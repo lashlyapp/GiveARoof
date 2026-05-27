@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { nav, org } from "@/lib/content";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -16,12 +19,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Transparent only while sitting over the home hero (not scrolled, menu closed).
+  const transparent = isHome && !scrolled && !open;
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-shadow ${
-        scrolled
-          ? "bg-white/95 shadow-sm backdrop-blur"
-          : "bg-white/80 backdrop-blur"
+      className={`fixed inset-x-0 top-0 z-50 transition-all ${
+        transparent ? "bg-transparent" : "bg-white/95 shadow-sm backdrop-blur"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
@@ -36,18 +40,26 @@ export function Header() {
             width={696}
             height={633}
             priority
-            className="h-11 w-auto"
+            className={`h-11 w-auto transition-[filter] ${
+              transparent ? "brightness-0 invert" : ""
+            }`}
           />
           <span className="sr-only">{org.name}</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          <ul className="flex items-center gap-7 text-sm font-medium text-ink-700">
+          <ul
+            className={`flex items-center gap-7 text-sm font-medium ${
+              transparent ? "text-white" : "text-ink-700"
+            }`}
+          >
             {nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-brand-600"
+                  className={`transition-colors ${
+                    transparent ? "hover:text-brand-300" : "hover:text-brand-600"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -61,7 +73,9 @@ export function Header() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="inline-flex items-center justify-center rounded-md p-2 text-ink-800 md:hidden"
+          className={`inline-flex items-center justify-center rounded-md p-2 md:hidden ${
+            transparent ? "text-white" : "text-ink-800"
+          }`}
           onClick={() => setOpen((v) => !v)}
         >
           <svg

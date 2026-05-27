@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { news } from "@/lib/content";
 
 export function News() {
@@ -20,10 +21,20 @@ export function News() {
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-1 px-6 py-5 transition-colors hover:bg-brand-50/60 sm:flex-row sm:items-center sm:gap-6"
               >
-                <div className="flex shrink-0 items-center gap-3 sm:w-48">
-                  <span className="text-sm font-bold uppercase tracking-wide text-brand-600">
-                    {article.outlet}
-                  </span>
+                <div className="flex h-12 shrink-0 items-center sm:w-44">
+                  {"logo" in article && article.logo ? (
+                    <Image
+                      src={article.logo}
+                      alt={article.outlet}
+                      width={160}
+                      height={48}
+                      className="max-h-10 w-auto object-contain"
+                    />
+                  ) : (
+                    <span className="text-sm font-bold uppercase tracking-wide text-brand-600">
+                      {article.outlet}
+                    </span>
+                  )}
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="font-medium text-ink-900 group-hover:text-brand-700">
