@@ -53,6 +53,7 @@ export function Hero() {
             priority={i === 0}
             sizes="100vw"
             className="object-cover"
+            style={{ objectPosition: slide.position }}
           />
         </div>
       ))}

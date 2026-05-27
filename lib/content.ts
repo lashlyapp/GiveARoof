@@ -35,6 +35,9 @@ export const hero = {
       title: "Turning unused travel rewards into a roof over someone's head.",
       subtitle:
         "Give A Roof converts donated airline miles, hotel points, and monetary gifts into safe nights of shelter — restoring dignity and hope to people experiencing homelessness.",
+      // Subject (figure + lit houses) sits in the right half; keep it framed
+      // when the wide image is cropped to a tall mobile viewport.
+      position: "60% center",
     },
     {
       src: "/images/hero-sunrise.jpg",
@@ -42,6 +45,7 @@ export const hero = {
       title: "Ending homelessness in three years — one roof at a time.",
       subtitle:
         "A data-driven, dignity-centered plan that gets people under a roof first, then builds a real path forward.",
+      position: "center",
     },
     {
       src: "/images/hero-hands.jpg",
@@ -49,6 +53,7 @@ export const hero = {
       title: "Your miles and points can change a life tonight.",
       subtitle:
         "Join a movement turning everyday travel rewards into shelter, stability, and a fresh start for neighbors in need.",
+      position: "center",
     },
   ],
 };
