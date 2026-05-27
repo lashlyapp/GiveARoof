@@ -30,6 +30,17 @@ export const hero = {
     "Give A Roof converts donated airline miles, hotel points, and monetary gifts into safe nights of shelter — restoring dignity and hope to people experiencing homelessness.",
   primaryCta: { label: "Donate now", href: org.donateUrl },
   secondaryCta: { label: "See how it works", href: "/#how-it-works" },
+  // Rotating background slideshow (retained from the original site).
+  slides: [
+    {
+      src: "/images/hero-night-village.jpg",
+      alt: "A lone figure walks through a dimly lit street at night.",
+    },
+    {
+      src: "/images/hero-hands-houses.jpg",
+      alt: "An open hand holds small model houses tied with a heart-shaped ribbon.",
+    },
+  ],
 };
 
 export const stats = [
