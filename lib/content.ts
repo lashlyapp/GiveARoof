@@ -25,20 +25,30 @@ export const nav = [
 
 export const hero = {
   eyebrow: "A 501(c)(3) nonprofit on a mission",
-  title: "Turning unused travel rewards into a roof over someone's head.",
-  subtitle:
-    "Give A Roof converts donated airline miles, hotel points, and monetary gifts into safe nights of shelter — restoring dignity and hope to people experiencing homelessness.",
   primaryCta: { label: "Donate now", href: org.donateUrl },
   secondaryCta: { label: "See how it works", href: "/#how-it-works" },
-  // Rotating background slideshow (retained from the original site).
+  // Auto-rotating slides; each pairs an image with its own message.
   slides: [
     {
       src: "/images/hero-night-village.jpg",
       alt: "A lone figure walks through a dimly lit street at night.",
+      title: "Turning unused travel rewards into a roof over someone's head.",
+      subtitle:
+        "Give A Roof converts donated airline miles, hotel points, and monetary gifts into safe nights of shelter — restoring dignity and hope to people experiencing homelessness.",
     },
     {
-      src: "/images/hero-hands-houses.jpg",
-      alt: "An open hand holds small model houses tied with a heart-shaped ribbon.",
+      src: "/images/hero-sunrise.jpg",
+      alt: "A city skyline silhouetted against a warm golden sunrise.",
+      title: "Ending homelessness in three years — one roof at a time.",
+      subtitle:
+        "A data-driven, dignity-centered plan that gets people under a roof first, then builds a real path forward.",
+    },
+    {
+      src: "/images/hero-hands.jpg",
+      alt: "A circle of people joining their hands together.",
+      title: "Your miles and points can change a life tonight.",
+      subtitle:
+        "Join a movement turning everyday travel rewards into shelter, stability, and a fresh start for neighbors in need.",
     },
   ],
 };

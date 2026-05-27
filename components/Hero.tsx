@@ -69,12 +69,15 @@ export function Hero() {
           <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur">
             {hero.eyebrow}
           </span>
-          <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            {hero.title}
-          </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-100">
-            {hero.subtitle}
-          </p>
+          {/* keyed by index so the message re-animates as slides change */}
+          <div key={index} className="hero-text-in">
+            <h1 className="mt-5 min-h-[3.3em] text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:min-h-0 sm:text-5xl lg:text-6xl">
+              {slides[index].title}
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-100">
+              {slides[index].subtitle}
+            </p>
+          </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href={hero.primaryCta.href}
